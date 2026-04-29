@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+/* href */
+.active{
+  background-color:red;
+}
