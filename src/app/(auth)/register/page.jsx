@@ -21,7 +21,7 @@ const RegisterPage = () => {
     });
     console.log(res,error);
     if(res){
-  alert("sign up in successfully done")
+  alert("sign up is successfully done")
 }
 if(error){
   alert(error.message)

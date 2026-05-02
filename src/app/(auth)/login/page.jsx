@@ -11,7 +11,8 @@ const LoginPage = () => {
 
   const [isShowPassword, setShowPassword] = useState(false);
 
-   const onSubmit = async (data) => {
+ 
+    const onSubmit = async (data) => {
     const { data: res, error } = await authClient.signIn.email({
     email: data.email, // required
     password: data.password, // required
@@ -19,6 +20,12 @@ const LoginPage = () => {
     callbackURL: "/",
 });
 console.log(res,error)
+    if(res){
+  alert("Login is successful")
+}
+if(error){
+  alert(error.message)
+}
 
    }
 
