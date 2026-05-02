@@ -12,6 +12,7 @@ const { data: session } = authClient.useSession();
 const user= session?.user;
 console.log(user)
 
+
   const links=<>
   <NavLink href={'/'}><li>Home</li></NavLink>
   <NavLink href={'/about'}><li>About</li></NavLink>
@@ -46,7 +47,8 @@ console.log(user)
           <h2>{user.name}</h2>
         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-        <Image src={user.image} alt='user-logo' height={40} width={40} ></Image>
+        <Image src={user?.image} referrerPolicy="no-referrer"  alt='user-logo' height={40} width={40} ></Image>
+        <p>{user?.name.charAt(0)}</p>
         </div>
       </div>
       <Link className='btn bg-gray-800 text-white font-bold px-4' href={'/login'}><button onClick={async()=>await authClient.signOut()}>Logout</button></Link>

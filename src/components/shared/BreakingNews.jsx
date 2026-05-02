@@ -19,7 +19,7 @@ const newses=[
 const BreakingNews = () => {
   return (
     <div className='flex justify-between items-center py-2 px-4 my-2 bg-pink-100 rounded-lg max-w-7xl mx-auto'>
-      <button className='btn bg-pink-800 text-white font-bold'>Latest</button>
+      <button className='btn bg-pink-800 text-white font-semibold'>Latest</button>
       <Marquee pauseOnHover={true} speed={30}>
 {
   newses.map(news=><span key={news.id}>{news.title}</span>)
